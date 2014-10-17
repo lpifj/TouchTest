@@ -36,7 +36,7 @@
         
         //円の描画
         CGContextSetFillColor(context, CGColorGetComponents(color.CGColor));
-        CGContextFillEllipseInRect(context, CGRectMake(location.x, location.y, 10, 10));
+        CGContextFillEllipseInRect(context, CGRectMake(location.x - 30, location.y -20, 70, 70));
     }
 }
 
@@ -80,7 +80,7 @@
     [self showTouchPoint:[event allTouches]];
 }
 
-- (void)showTouchPoints{
+- (void)showTouchPoint:(NSSet *)allTouches{
     /*
     for (UITouch *touch in allTouches){
         location = [touch locationInView:self];
